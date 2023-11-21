@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartas</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .card {
+      width: 150px;
+      height: 200px;
+      perspective: 1000px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      background-color: rebeccapurple;
+      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face">Clique para virar</div>
+    <div class="card-face card-back">Você é gay</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face">Clique para virar</div>
+    <div class="card-face card-back">Irei te comer hoje</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face">Clique para virar</div>
+    <div class="card-face card-back">Seu cu é meu</div>
+  </div>
+</div>
+
+</body>
+</html>
